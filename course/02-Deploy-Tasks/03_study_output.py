@@ -17,3 +17,7 @@
 # MAGIC %md
 # MAGIC
 # MAGIC Answer here...
+# MAGIC transport.ingjerdmyhre_kongsberg_65ff812f_revenue.borough_population
+# MAGIC transport.ingjerdmyhre_kongsberg_65ff812f_revenue.revenue_by_borough
+# MAGIC transport.ingjerdmyhre_kongsberg_65ff812f_revenue.revenue_by_tripmonth
+# MAGIC transport.ingjerdmyhre_kongsberg_65ff812f_revenue.revenue_per_inhabitant

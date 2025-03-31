@@ -37,3 +37,7 @@
 # MAGIC ## Task: Explore data
 # MAGIC
 # MAGIC Open a new tab, and go to `orgs/acme/domains/transport/projects/taxinyc/flows/prep/revenue/explore/taxinyc_revenue`.
+
+# COMMAND ----------
+
+
