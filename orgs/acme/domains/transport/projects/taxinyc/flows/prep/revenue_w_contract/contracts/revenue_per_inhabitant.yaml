@@ -51,7 +51,7 @@ models:
         type: float
         required: true
         minimum: 0
-        maximum: 1
+        maximum: 100
       revenue_per_inhabitant:
         description: Average revenue per person in the borough
         type: double
