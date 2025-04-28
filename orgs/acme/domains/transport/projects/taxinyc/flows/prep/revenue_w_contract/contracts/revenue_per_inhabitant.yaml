@@ -87,7 +87,7 @@ quality:
     checks for revenue_per_inhabitant:
       - row_count = 5
       - duplicate_count(pickup_borough) = 0
-      - sum(population_share) between 0.99 and 1.01
+      - sum(population_share) between 99 and 101
       - min(population) > 0
       - min(amount) >= 0
       - min(revenue_per_inhabitant) >= 0
