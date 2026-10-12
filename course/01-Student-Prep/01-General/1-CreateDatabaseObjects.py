@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # What's in this exercise?
 # MAGIC
@@ -64,5 +68,4 @@ spark.sql(f"CREATE DATABASE IF NOT EXISTS {revenue_db}")
 # MAGIC SHOW DATABASES;
 
 # COMMAND ----------
-
 
