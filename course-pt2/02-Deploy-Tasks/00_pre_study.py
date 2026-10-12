@@ -12,14 +12,14 @@
 # MAGIC
 # MAGIC We will do our tasks in the context of the folder representing the revenue data pipeline or flow:
 # MAGIC
-# MAGIC `orgs/acme/domains/transport/projects/taxinyc/flows/prep/dltrevenue/`
+# MAGIC `orgs/acme/domains/transport/projects/taxinyc/flows/prep/dprevenue/`
 # MAGIC
 # MAGIC The structure is: 
 # MAGIC - org: `acme`
 # MAGIC     - domain: `transport`
 # MAGIC         - project: `taxinyc`
 # MAGIC             - flowtype: `prep` (meaning ETL/data engineering, the alternative is `ml`, for ML work)
-# MAGIC                 - flow: `dltrevenue` 
+# MAGIC                 - flow: `dprevenue` 
 # MAGIC
 # MAGIC The structure will be applied to:
 # MAGIC

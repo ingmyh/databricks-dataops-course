@@ -27,8 +27,7 @@
 # MAGIC 2. Open the **Deployments** panel (rocket icon) in the left sidebar of the editor.
 # MAGIC 3. Select the target `dev`.
 # MAGIC 4. Press **Deploy**.
-# MAGIC 5. Under **Bundle resources**, press the run icon next to the `dprevenue` pipeline.
-# MAGIC 6. Optional: repeat for `flows/prep/dprevenue_w_dq`, which adds data quality expectations.
+# MAGIC 5. Run the `dprevenue` pipeline by pressing the Play button on the Pipeline symbol.
 
 # COMMAND ----------
 
@@ -54,20 +53,4 @@
 # MAGIC ## Task: Deploy to prod
 # MAGIC
 # MAGIC Select the target `prod` and press **Deploy**. Prod resources get no prefix, so the schema becomes
-# MAGIC `acme_transport_taxinyc.dprevenue`. This fails if someone else has already deployed prod, as there can only be one.
-
-# COMMAND ----------
-
-# MAGIC %md
-# MAGIC
-# MAGIC ## Task: Run `dprevenue_w_dq` and study the failure
-# MAGIC
-# MAGIC `dprevenue_w_dq` is **expected to fail**. This is intentional.
-# MAGIC
-# MAGIC 1. Deploy and run `dprevenue_w_dq` as above.
-# MAGIC 2. Open the failed update and find the `EXPECTATION_VIOLATION` error. Which flow failed, and which expectations were violated?
-# MAGIC 3. Why does the expectation fail? Look at the output record in the error message.
-# MAGIC 4. Why did `revenue_per_inhabitant` not run?
-# MAGIC 5. Optional: fix the pipeline, either with `dp.expect_all_or_drop` or by filtering out the bad rows before the aggregation, then redeploy and rerun.
-# MAGIC
-# MAGIC Answer here...
+# MAGIC `acme_transport_taxinyc.dprevenue`. Prod is shared, so only one copy exists. See the prod deploy task later.

@@ -6,7 +6,7 @@ expectations (borough not null and not `Unknown`). Deployed as its own Databrick
 Prod output schema: `acme_transport_taxinyc.dprevenue_w_dq`. Dev resources are prefixed with `dev_<username>_`.
 
 Deploy from the UI: open this folder in your Git folder, open the **Deployments** panel, select `dev`,
-press **Deploy**, then run `dprevenue_w_dq` under **Bundle resources**. From a terminal:
+press **Deploy**, then run `dprevenue_w_dq` by pressing the Play button on the Pipeline symbol. From a terminal:
 
 ```
 databricks bundle deploy -t dev

@@ -1,7 +1,7 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC
-# MAGIC # Create a dlt policy and give permissions to the training group, under Compute -> Policies.
+# MAGIC # Create a dp policy and give permissions to the training group, under Compute -> Policies.
 # MAGIC
 # MAGIC Policy spec:
 # MAGIC

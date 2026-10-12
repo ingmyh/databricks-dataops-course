@@ -20,7 +20,7 @@ The catalog is the `catalog` bundle variable (default `acme_transport_taxinyc`),
 1. Open this folder (the one containing `databricks.yml`) in your Git folder in the workspace.
 2. Open the **Deployments** panel (rocket icon) in the left sidebar of the editor.
 3. Select target `dev` and press **Deploy**.
-4. Under **Bundle resources**, press the run icon next to `dprevenue`.
+4. Run the pipeline by pressing the Play button on the Pipeline symbol.
 
 ## Deploy from a terminal
 
