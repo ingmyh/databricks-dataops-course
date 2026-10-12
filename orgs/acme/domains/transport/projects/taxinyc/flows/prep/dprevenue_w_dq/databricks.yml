@@ -1,0 +1,36 @@
+# Databricks Asset Bundle (DAB) for the dprevenue declarative pipelines.
+#
+# Environment-specific naming is handled by DABs instead of brickops:
+# - target `dev` uses `mode: development`, which prefixes deployed resource names
+#   (pipelines, schemas) with `dev_<username>_` and runs pipelines in development mode.
+# - target `prod` deploys resources unprefixed, so schemas end up as
+#   `<catalog>.dprevenue_w_dq`.
+#
+# Deploy from the Databricks UI with the Deploy button in the bundle's Deployments panel,
+# or from a terminal with `databricks bundle deploy -t dev`.
+bundle:
+  name: dprevenue_w_dq
+
+variables:
+  catalog:
+    description: Unity Catalog catalog the pipelines write to.
+    default: acme_transport_taxinyc
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      # Deploy the bundle under the user's home, so that every student gets their own copy.
+      root_path: ~/.bundle/${bundle.name}/${bundle.target}
+
+  prod:
+    mode: production
+    workspace:
+      root_path: /Shared/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - group_name: users
+        level: CAN_VIEW

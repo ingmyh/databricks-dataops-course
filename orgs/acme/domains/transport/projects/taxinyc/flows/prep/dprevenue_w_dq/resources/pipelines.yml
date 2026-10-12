@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    dprevenue_w_dq:
+      name: dprevenue_w_dq
+      catalog: ${var.catalog}
+      schema: ${resources.schemas.dprevenue_w_dq_schema.name}
+      serverless: true
+      channel: CURRENT
+      libraries:
+        - glob:
+            include: ../transformations/**

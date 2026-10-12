@@ -1,0 +1,12 @@
+resources:
+  pipelines:
+    dprevenue:
+      name: dprevenue
+      catalog: ${var.catalog}
+      # Referencing the schema resource gives the dev prefix in `dev` target.
+      schema: ${resources.schemas.dprevenue_schema.name}
+      serverless: true
+      channel: CURRENT
+      libraries:
+        - glob:
+            include: ../transformations/**

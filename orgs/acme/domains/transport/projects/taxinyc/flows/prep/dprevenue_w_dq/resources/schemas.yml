@@ -1,0 +1,6 @@
+resources:
+  schemas:
+    dprevenue_w_dq_schema:
+      catalog_name: ${var.catalog}
+      name: dprevenue_w_dq
+      comment: Revenue data product (declarative pipeline with data quality expectations)

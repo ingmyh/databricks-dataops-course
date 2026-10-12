@@ -52,6 +52,12 @@ A longer explanation of the ideas behind the repo structure can be found in the 
 
 For the dataops code, we use the [brickops](https://github.com/brickops/brickops) package from Pypi, to enable a versioned pipeline deployment and way of working. The main logic is under [dataops/deploy](https://github.com/brickops/brickops/blob/main/brickops/dataops/deploy/autojob.py).
 
+## Declarative pipelines with Databricks Asset Bundles
+
+The `dprevenue` and `dprevenue_w_dq` flows (under `orgs/acme/domains/transport/projects/taxinyc/flows/prep/`) contain the declarative pipelines as plain python files, deployed with a Databricks Asset Bundle (DAB) instead of brickops. The bundle targets `dev` and `prod` handle prefixing of pipeline and schema names.
+
+To deploy: open the `dprevenue` folder in your Databricks Git folder, open the **Deployments** panel in the left sidebar, select the target, press **Deploy**, then run the pipeline from **Bundle resources**. See the [flow README](orgs/acme/domains/transport/projects/taxinyc/flows/prep/dprevenue/README.md) and `course-pt2/02-Deploy-Tasks/06c_dab_deploy_dp.py`.
+
 ## Reusing the structure and dataops libs
 
 The structure and brickops libs can be used in your own projects, by forking the repo or copying the content and adapting it.
@@ -62,5 +68,5 @@ The structure and brickops libs can be used in your own projects, by forking the
    - DO NOT run anything under course/00-Workshop-Admin-Prep
 2. Got to course/01-Student-Prep/01-General
    - Go through the instructions under that folder
-3. Start with the tasks under 02-DeployTasks
+3. Start with the tasks under 02-DeployTasks (for the declarative pipelines, use `course-pt2/02-Deploy-Tasks/06c_dab_deploy_dp.py`)
    - Some sections are just for reading or running, others you need to solve.
