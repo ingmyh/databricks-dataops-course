@@ -61,7 +61,7 @@
 # MAGIC
 # MAGIC ## Task: Go to where you forked the repo on github.com.
 # MAGIC Go to the actions tab, and run the workflow. See if the deploy succeeds.
-
-
-
-
+# MAGIC
+# MAGIC
+# MAGIC
+# MAGIC

@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC
 # MAGIC # Deploy pipelines defined by deployment.yml
@@ -74,6 +78,15 @@ logging.getLogger("brickops").setLevel(logging.INFO)
 
 # COMMAND ----------
 
+# Fix: Patch parameter format for current DLT API (expects key/value, not name/default)
+import importlib
+from brickops.dataops.deploy.pipeline.buildconfig import build as _pipeline_build
+importlib.reload(_pipeline_build)
+_orig_fn = _pipeline_build.build_context_parameters
+def _fixed_build_context_parameters(env, tags):
+    return [{"key": p["name"], "value": p["default"]} for p in _orig_fn(env, tags)]
+_pipeline_build.build_context_parameters = _fixed_build_context_parameters
+
 # Deploy pipelines based on deployment.yml, in dev mode, specified by env param
 response = autopipeline()
 response
@@ -97,8 +110,8 @@ run_pipeline(
 
 # Can be used when the pipeline created has the same name as one previously recreated,
 # but note that names are no longer idempotent in Databricks
-# run_pipeline_by_name(
-#    pipeline_name=response["pipeline_name"])
+run_pipeline_by_name(
+   pipeline_name=response["pipeline_name"])
 
 # COMMAND ----------
 
@@ -126,4 +139,3 @@ run_pipeline(
 # run_pipeline(
 #     pipeline_id=prod_response["response"]["pipeline_id"]
 # )
-

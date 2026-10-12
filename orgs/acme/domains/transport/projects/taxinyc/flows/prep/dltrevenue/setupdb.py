@@ -41,4 +41,3 @@ spark.sql(f"CREATE DATABASE IF NOT EXISTS {db}")
 
 # COMMAND ----------
 
-
