@@ -4,7 +4,7 @@
 # MAGIC
 # MAGIC [DQX](https://databrickslabs.github.io/dqx/) is a very promising new data quality frameworks
 # MAGIC
-# MAGIC * Can run in both DLT and regular spark notebooks (unlike DLT quality checks)
+# MAGIC * Can run in both DP and regular spark notebooks (unlike DP quality checks)
 # MAGIC * Has [profiling](https://databrickslabs.github.io/dqx/docs/guide/#data-profiling-and-quality-rules-generation) and a lot of other nice functionality, like quality dashboards
 # MAGIC * Official Databricks Labs framework
 # MAGIC * Checks can be written in python, yaml or json
@@ -13,7 +13,7 @@
 # MAGIC
 # MAGIC * Use DQX if you need pro-active monitoring (before data is written to a target table).
 # MAGIC * For monitoring data quality of already persisted data in Delta tables (post-factum monitoring), try Databricks Lakehouse Monitoring.
-# MAGIC * DQX can be integrated with DLT for data quality checking but your first choice for DLT pipelines should be DLT Expectations. DQX can be used to profile data and generate DLT expectation candidates.
+# MAGIC * DQX can be integrated with DP for data quality checking but your first choice for DP pipelines should be DP Expectations. DQX can be used to profile data and generate DP expectation candidates.
 
 # COMMAND ----------
 

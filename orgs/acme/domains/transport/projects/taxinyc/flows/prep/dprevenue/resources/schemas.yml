@@ -1,0 +1,6 @@
+resources:
+  schemas:
+    dprevenue_schema:
+      catalog_name: ${var.catalog}
+      name: dprevenue
+      comment: Revenue data product (declarative pipeline)

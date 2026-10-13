@@ -8,10 +8,10 @@
 
 # MAGIC %md
 # MAGIC
-# MAGIC ## Study: deployment.yml
+# MAGIC ## Study: databricks.yml
 # MAGIC
-# MAGIC Look at `orgs/acme/domains/transport/projects/taxinyc/flows/prep/dltrevenue/deployment.yml` in the repo.
-# MAGIC It defines the job which will run the pipeline.
+# MAGIC Look at `orgs/acme/domains/transport/projects/taxinyc/flows/prep/dprevenue/databricks.yml` in the repo.
+# MAGIC It defines the bundle, and the resources/ folder defines the pipeline.
 
 # COMMAND ----------
 
@@ -19,9 +19,9 @@
 # MAGIC
 # MAGIC ## Task: Run dev deploy
 # MAGIC
-# MAGIC 1. Go to the notebook orgs/acme/domains/transport/projects/taxinyc/flows/prep/dltrevenue/deploy
-# MAGIC 2. Connect to serverless compute.
-# MAGIC 3. Run the cells up to and including deploying and running the dev job.
+# MAGIC 1. Open the folder orgs/acme/domains/transport/projects/taxinyc/flows/prep/dprevenue
+# MAGIC 2. Open the **Deployments** panel, select the target `dev` and press **Deploy**.
+# MAGIC 3. Run the pipeline by pressing the Play button on the Pipeline symbol.
 
 # COMMAND ----------
 

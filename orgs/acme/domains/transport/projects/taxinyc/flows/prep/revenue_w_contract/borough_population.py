@@ -134,7 +134,7 @@ print("borough_population_tbl:" + repr(borough_population_tbl))
 
 # COMMAND ----------
 
-# # Used to generate training data set, needed by DLT Pipeline
+# # Used to generate training data set, needed by DP Pipeline
 # borough_population_tbl = "training.taxinyc_trips.borough_population"
 # (
 #     simple_pop_df.write.mode("overwrite")

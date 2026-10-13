@@ -8,7 +8,7 @@ Some examples:
 
 An data transformation notebook
 A notebook training or evaluating MLFlow-models
-A DLT-pipeline notebook
+A DP-pipeline notebook
 A python-script
 A python-wheel
 A jar-file
